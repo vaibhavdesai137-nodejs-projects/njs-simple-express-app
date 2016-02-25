@@ -1,7 +1,54 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    head
+        title #{title} - NodeJS Simple Express App
+        link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='/stylesheets/footer.css')
+        link(rel='stylesheet', href='/fonts/font-awesome-4.5.0/css/font-awesome.min.css')
+        
+    body
+        nav.navbar.navbar-default.navbar-fixed-top
+            .container
+                .navbar-header
+                    button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar')
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href='/') NodeJS Simple Express App Using Jade
+                #navbar.collapse.navbar-collapse
+                    ul.nav.navbar-nav.navbar-right
+                        li(class=(title === 'Home' ? 'active' : ''))
+                            a(href='/') Home
+                        li(class=(title === 'About' ? 'active' : ''))
+                            a(href='/about') About
+                        li(class=(title === 'Contact' ? 'active' : ''))
+                            a(href='/contact') Contact
+        block content
+    
+        footer
+            .row
+                .col-lg-6.col-md-12.col-sm-12.col-xs-12
+                    ul
+                        li
+                            a.btn.btn-success.links(target='_blank', href='https://github.com/vaibhavdesai137-nodejs-projects/njs-simple-express-app')
+                                i.fa.fa-code.fa-lg
+                                    span.social-links  Code
+                        li
+                            a.btn.btn-success.links(target='_blank', href='https://github.com/vaibhavdesai137')
+                                i.fa.fa-github.fa-lg
+                                    span.social-links  GitHub
+                        li
+                            a.btn.btn-success.links(target='_blank', href='https://www.linkedin.com/in/vaibhav-desai-a864aa15')
+                                i.fa.fa-linkedin.fa-lg
+                                    span.social-links  LinkedIn
+                        li
+                            a.btn.btn-success.links(target='_blank', href='https://www.facebook.com/vaibhav.desai.165033')
+                                i.fa.fa-facebook.fa-lg
+                                    span.social-links  Facebook
+                .col-lg-6.col-md-12.col-sm-12.col-xs-12
+                    p Vaibhav Desai
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src='/javascripts/bootstrap.js')
